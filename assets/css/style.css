@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: #e3f0ff;
+    min-height: 100vh;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.menu{
+    display:none;
+    cursor: pointer;
+}
+nav .logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color: #5354b3;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav ul li a{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+nav ul button{
+    border: none;
+    background-color: #5354b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+main{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-box{
+    width: 40%;
+}
+.text-box h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.text-box h1 b{
+    color: #f1676d;
+}
+.text-box p{
+    color: #372c62;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.input-box{
+    margin: 20px 0;
+    display: flex;
+}
+.input-box input{
+    width: 60%;
+    display: block;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.input-box input::placeholder{
+    color:#372c62;
+}
+.input-box button{
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #5354b3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.redes-sociais{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.redes-sociais a i{
+    font-size: 25px;
+    margin: 0 3px;
+    color: white;
+    background-color:#372c62;
+    padding: 8px;
+    border-radius: 5px;
+}
+.img-box {
+    width: 60%;
+}
+.img-box img{
+    width: 100%;
+    margin-left: 30px;
+}
+@media (max-width:960px){
+    .menu{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s ease-in;
+        background-color: #5354b3;
+        color: white;
+        padding-top: 30px;
+    }
+    nav ul.active{
+        transform:translateY(0);
+
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        color: white;
+    }
+    nav ul button{
+        background-color: #f1676d;
+        font-size: 18px;
+        margin: 10px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-box, .img-box{
+        width: 100%;
+        text-align: center;
+    }
+    .text-box .input-box{
+        justify-content: center;
+    }
+}
